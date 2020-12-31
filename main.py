@@ -70,7 +70,7 @@ def main():
         s_profit = 0.00
         for stock in holdings:
             if stock.sold:
-                s_expense = s_expense + stock.expense()
+                s_expense = s_expense + float(abs(stock.expense()))
                 s_profit = s_profit + stock.profit()
             else:
                 h_expense = h_expense + stock.expense()
